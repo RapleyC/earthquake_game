@@ -9,7 +9,7 @@ script = ExtResource("1_4dy7t")
 [node name="random_event_generator" type="Node" parent="."]
 script = ExtResource("2_u06nw")
 
-[node name="Timer" type="Timer" parent="random_event_generator"]
+[node name="earthquake_generation_timer" type="Timer" parent="random_event_generator"]
 autostart = true
 
 [node name="timer" type="Label" parent="."]
@@ -18,4 +18,4 @@ offset_top = 431.0
 offset_right = 547.0
 offset_bottom = 454.0
 
-[connection signal="timeout" from="random_event_generator/Timer" to="random_event_generator" method="_on_timer_timeout"]
+[connection signal="timeout" from="random_event_generator/earthquake_generation_timer" to="random_event_generator" method="_on_timer_timeout"]

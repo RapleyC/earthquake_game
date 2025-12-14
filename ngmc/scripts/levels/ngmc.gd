@@ -13,7 +13,7 @@ func _ready() -> void:
 ### Defines a base date/time string when the game is ran (YYYY-MM-DD HH:MM:SS) ###
 						
 func time_update():
-	GlobalManager.real_time_rounded_to_seconds += (0.1)
+	GlobalManager.real_time_rounded_to_seconds += (0.2)
 	GlobalManager.current_datetime = Time.get_datetime_string_from_unix_time(GlobalManager.real_time_rounded_to_seconds)
 	timer.text = GlobalManager.current_datetime
 # Called every frame. 'delta' is the elapsed time since the previous frame.
