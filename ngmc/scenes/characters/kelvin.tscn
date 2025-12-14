@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1aeoqjx2ai1b"]
+
+[ext_resource type="Texture2D" uid="uid://kdkjhwxp16gx" path="res://assets/tiles/!$Spaceship_reactor.png" id="1_33bsb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omxes"]
+size = Vector2(106, 93)
+
+[node name="Kelvin" type="Node2D"]
+position = Vector2(0, -1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -35)
+texture = ExtResource("1_33bsb")
+region_enabled = true
+region_rect = Rect2(0, 0, 145.893, 194.00732)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 9.5)
+shape = SubResource("RectangleShape2D_omxes")

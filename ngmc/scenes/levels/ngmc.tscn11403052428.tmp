@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://25j4w4th788e"]
+
+[ext_resource type="Script" uid="uid://djc56xtxxlb14" path="res://scripts/levels/ngmc.gd" id="1_4dy7t"]
+[ext_resource type="Script" uid="uid://bu0llrefe717g" path="res://scripts/random_event_generator/random_event_generator.gd" id="2_u06nw"]
+
+[node name="main_level_ngmc" type="Node2D"]
+script = ExtResource("1_4dy7t")
+
+[node name="random_event_generator" type="Node" parent="."]
+script = ExtResource("2_u06nw")
+
+[node name="Timer" type="Timer" parent="random_event_generator"]
+autostart = true
+
+[node name="timer" type="Label" parent="."]
+offset_left = 557.0
+offset_top = 29.0
+offset_right = 639.0
+offset_bottom = 52.0
+
+[node name="last earthquake" type="Label" parent="."]
+offset_left = 112.0
+offset_top = 330.0
+offset_right = 152.0
+offset_bottom = 353.0
+
+[connection signal="timeout" from="random_event_generator/Timer" to="random_event_generator" method="_on_timer_timeout"]

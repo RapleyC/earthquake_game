@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://s11weixucsym"]
+
+[ext_resource type="Script" uid="uid://xwyvs2x8v2ee" path="res://scripts/ui/earthquake_history_log.gd" id="1_otdlm"]
+
+[node name="EarthquakeHistoryLog" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_right = 569.0
+offset_bottom = 390.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+script = ExtResource("1_otdlm")
+
+[node name="Timer" type="Timer" parent="ScrollContainer/VBoxContainer"]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="ScrollContainer/VBoxContainer/Timer" to="ScrollContainer/VBoxContainer" method="_on_timer_timeout"]

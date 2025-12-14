@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Earthquake" load_steps=2 format=3 uid="uid://bpv8638cr3i5a"]
+
+[ext_resource type="Script" uid="uid://ctfjl1hn3s6y" path="res://scripts/resources/earthquake_resource.gd" id="1_0250y"]
+
+[resource]
+script = ExtResource("1_0250y")
+metadata/_custom_type_script = "uid://ctfjl1hn3s6y"

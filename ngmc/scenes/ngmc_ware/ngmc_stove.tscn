@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw77wslwcvkmt"]
+
+[ext_resource type="Texture2D" uid="uid://c5as2sr83jb1e" path="res://assets/Cyberpunk Interior Remaster/characters/!Kitchen_devices_remaster.png" id="1_sqblv"]
+
+[node name="NgmcStove" type="Area2D"]
+
+[node name="oven_off_stove_off" type="Node2D" parent="."]
+
+[node name="oven_stove_sprite_1" type="Sprite2D" parent="oven_off_stove_off"]
+texture_filter = 1
+position = Vector2(0, -24)
+texture = ExtResource("1_sqblv")
+region_enabled = true
+region_rect = Rect2(48, 216, 48, 56)
+
+[node name="oven_stove_sprite_2" type="Sprite2D" parent="oven_off_stove_off"]
+texture_filter = 1
+position = Vector2(0, -8)
+texture = ExtResource("1_sqblv")
+region_enabled = true
+region_rect = Rect2(96, 344, 48, 24)
+
+[node name="oven_stove_sprite_3" type="Sprite2D" parent="oven_off_stove_off"]
+texture_filter = 1
+position = Vector2(-4, -25)
+texture = ExtResource("1_sqblv")
+region_enabled = true
+region_rect = Rect2(160, 238, 8, 10)
+
+[node name="oven_stove_sprite_4" type="Sprite2D" parent="oven_off_stove_off"]
+texture_filter = 1
+position = Vector2(4, -25)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+texture = ExtResource("1_sqblv")
+region_enabled = true
+region_rect = Rect2(160, 238, 8, 10)
+
+[node name="oven_stove_sprite_5" type="Sprite2D" parent="oven_off_stove_off"]
+texture_filter = 1
+position = Vector2(7, -29)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+texture = ExtResource("1_sqblv")
+region_enabled = true
+region_rect = Rect2(162, 236, 2, 2)
+
+[node name="oven_on_stove_off" type="Node2D" parent="."]
+
+[node name="oven_stove_sprite_5" type="Sprite2D" parent="oven_on_stove_off"]
+texture_filter = 1
+position = Vector2(0, -24)
+rotation = 3.1415927
+scale = Vector2(-1, -1)
+texture = ExtResource("1_sqblv")
+region_enabled = true
+region_rect = Rect2(0, 216, 48, 56)
+
+[node name="oven_on_stove_on" type="Node2D" parent="."]
+
+[node name="oven_stove_sprite_5" type="Sprite2D" parent="oven_on_stove_on"]
+texture_filter = 1
+position = Vector2(0, -24)
+rotation = 3.1415927
+scale = Vector2(-1, -1)
+texture = ExtResource("1_sqblv")
+region_enabled = true
+region_rect = Rect2(0, 216, 48, 56)
