@@ -49,9 +49,7 @@ func aftershock_sequence(input_earthquake_id, input_mainshock_magnitude, input_m
 	while aftershock_count != 0:
 		await get_tree().create_timer(randf_range(1,3)).timeout
 		if randf_range(0,100) > 0:
-
-			var rng = RandomNumberGenerator.new()
-			var magnitude = randf_range(0,input_mainshock_magnitude)
+			var magnitude = randf_range(-1,input_mainshock_magnitude-1)
 			var earthquake_id: int = 1 + len(GlobalManager.earthquake_catalog)
 			var earthquake_depth: float = randf_range(input_mainshock_depth - (input_mainshock_depth/10), input_mainshock_depth + (input_mainshock_depth/10))
 			var earthquake_latitude: float = randf_range(input_mainshock_latitude - (1/20 * input_mainshock_magnitude), input_mainshock_latitude + (1/20 * input_mainshock_magnitude))
