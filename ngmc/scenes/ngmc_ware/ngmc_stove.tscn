@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cw77wslwcvkmt"]
 
-[ext_resource type="Texture2D" uid="uid://c5as2sr83jb1e" path="res://assets/Cyberpunk Interior Remaster/characters/!Kitchen_devices_remaster.png" id="1_sqblv"]
+[ext_resource type="Texture2D" uid="uid://c5as2sr83jb1e" path="res://assets/unused_library/Cyberpunk Interior Remaster/characters/!Kitchen_devices_remaster.png" id="1_sqblv"]
 
 [node name="NgmcStove" type="Area2D"]
 
@@ -46,6 +46,7 @@ region_enabled = true
 region_rect = Rect2(162, 236, 2, 2)
 
 [node name="oven_on_stove_off" type="Node2D" parent="."]
+visible = false
 
 [node name="oven_stove_sprite_5" type="Sprite2D" parent="oven_on_stove_off"]
 texture_filter = 1
@@ -57,6 +58,7 @@ region_enabled = true
 region_rect = Rect2(0, 216, 48, 56)
 
 [node name="oven_on_stove_on" type="Node2D" parent="."]
+visible = false
 
 [node name="oven_stove_sprite_5" type="Sprite2D" parent="oven_on_stove_on"]
 texture_filter = 1

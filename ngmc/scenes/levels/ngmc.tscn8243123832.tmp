@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://25j4w4th788e"]
+
+[ext_resource type="Script" uid="uid://djc56xtxxlb14" path="res://scripts/levels/ngmc.gd" id="1_4dy7t"]
+[ext_resource type="Script" uid="uid://bt7lly2a8wrys" path="res://scripts/ui/player_camera.gd" id="2_gr4pr"]
+[ext_resource type="Script" uid="uid://bu0llrefe717g" path="res://scripts/random_event_generator/random_event_generator.gd" id="2_u06nw"]
+[ext_resource type="PackedScene" uid="uid://c1aeoqjx2ai1b" path="res://scenes/characters/kelvin.tscn" id="4_4ro38"]
+[ext_resource type="FontFile" uid="uid://cvstbrtclap6a" path="res://assets/World of Solaria UI Asset Pack Update 03c/Fonts/Odderf Basic.otf" id="5_tg5gk"]
+[ext_resource type="Texture2D" uid="uid://dhhcjpmpifmny" path="res://assets/World of Solaria UI Asset Pack Update 03c/Solaria UI Update 03c/Windows.png" id="6_ui1o5"]
+
+[node name="main_level_ngmc" type="Node2D"]
+script = ExtResource("1_4dy7t")
+
+[node name="player_camera" type="Camera2D" parent="."]
+script = ExtResource("2_gr4pr")
+
+[node name="random_event_generator" type="Node" parent="."]
+script = ExtResource("2_u06nw")
+
+[node name="earthquake_generation_timer" type="Timer" parent="random_event_generator"]
+autostart = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="Kelvin" parent="." instance=ExtResource("4_4ro38")]
+position = Vector2(19, -32)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Windows" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(485, 425)
+scale = Vector2(8.4375, 8.4375)
+texture = ExtResource("6_ui1o5")
+region_enabled = true
+region_rect = Rect2(336, 0, 48, 48)
+
+[node name="Windows" type="Sprite2D" parent="CanvasLayer/Windows"]
+texture_filter = 1
+position = Vector2(214.99998, 871)
+scale = Vector2(8.4375, 8.4375)
+texture = ExtResource("6_ui1o5")
+region_enabled = true
+region_rect = Rect2(336, 0, 48, 48)
+
+[node name="timer" type="Label" parent="CanvasLayer"]
+offset_left = 551.0
+offset_top = 23.0
+offset_right = 633.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("5_tg5gk")
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+clip_contents = true
+anchors_preset = -1
+anchor_top = -0.103
+anchor_right = 0.144
+anchor_bottom = 0.012
+offset_left = 27.0
+offset_top = 829.24
+offset_right = 394.0
+offset_bottom = 1035.24
+grow_vertical = 0
+alignment = 2
+
+[connection signal="timeout" from="random_event_generator/earthquake_generation_timer" to="random_event_generator" method="_on_timer_timeout"]

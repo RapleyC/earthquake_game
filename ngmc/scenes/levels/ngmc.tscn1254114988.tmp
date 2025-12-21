@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://25j4w4th788e"]
+
+[ext_resource type="Script" uid="uid://djc56xtxxlb14" path="res://scripts/levels/ngmc.gd" id="1_4dy7t"]
+[ext_resource type="Script" uid="uid://bt7lly2a8wrys" path="res://scripts/ui/player_camera.gd" id="2_gr4pr"]
+[ext_resource type="Script" uid="uid://bu0llrefe717g" path="res://scripts/random_event_generator/random_event_generator.gd" id="2_u06nw"]
+[ext_resource type="PackedScene" uid="uid://c1aeoqjx2ai1b" path="res://scenes/characters/kelvin.tscn" id="4_4ro38"]
+[ext_resource type="FontFile" uid="uid://cvstbrtclap6a" path="res://assets/World of Solaria UI Asset Pack Update 03c/Fonts/Odderf Basic.otf" id="5_tg5gk"]
+
+[node name="main_level_ngmc" type="Node2D"]
+script = ExtResource("1_4dy7t")
+
+[node name="player_camera" type="Camera2D" parent="."]
+script = ExtResource("2_gr4pr")
+
+[node name="random_event_generator" type="Node" parent="."]
+script = ExtResource("2_u06nw")
+
+[node name="earthquake_generation_timer" type="Timer" parent="random_event_generator"]
+autostart = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="Kelvin" parent="." instance=ExtResource("4_4ro38")]
+position = Vector2(19, -32)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="timer" type="Label" parent="CanvasLayer"]
+offset_left = 551.0
+offset_top = 23.0
+offset_right = 633.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("5_tg5gk")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 19.0
+offset_top = 406.0
+offset_right = 386.0
+offset_bottom = 612.0
+
+[connection signal="timeout" from="random_event_generator/earthquake_generation_timer" to="random_event_generator" method="_on_timer_timeout"]

@@ -1,0 +1,132 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfd443vp2j7dp"]
+
+[ext_resource type="Texture2D" uid="uid://dhhcjpmpifmny" path="res://assets/unused_library/World of Solaria UI Asset Pack Update 03c/Solaria UI Update 03c/Windows.png" id="1_2ccmw"]
+
+[node name="earthquake_log" type="Node2D"]
+scale = Vector2(2, 2)
+
+[node name="earthquake_log_title_1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-99, -40)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(576, 0, 40, 40)
+
+[node name="earthquake_log_title_2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(99.79999, -40)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(600, 0, 40, 40)
+
+[node name="earthquake_log_title_3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-71.79999, -40)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(600, 0, 16, 40)
+
+[node name="earthquake_log_title_4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-55.799988, -40)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(600, 0, 16, 40)
+
+[node name="earthquake_log_title_5" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-7.799988, -40)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(600, 0, 16, 40)
+
+[node name="earthquake_log_title_6" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-23.799988, -40)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(600, 0, 16, 40)
+
+[node name="earthquake_log_title_7" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-39.799988, -40)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(600, 0, 16, 40)
+
+[node name="earthquake_log_title_8" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(8, -40)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(600, 0, 16, 40)
+
+[node name="earthquake_log_title_9" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(24, -40)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(600, 0, 16, 40)
+
+[node name="earthquake_log_title_10" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(72, -40)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(600, 0, 16, 40)
+
+[node name="earthquake_log_title_11" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(56, -40)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(600, 0, 16, 40)
+
+[node name="earthquake_log_title_12" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(40, -40)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(600, 0, 16, 40)
+
+[node name="earthquake_log_text_box_1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-77, 85)
+scale = Vector2(4.45, 4.45)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(432, 32, 48, 16)
+
+[node name="earthquake_log_text_box_3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-77.20001, 17.099998)
+scale = Vector2(4.45, 4.45)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(432, 0, 48, 16)
+
+[node name="earthquake_log_text_box_2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(95.79999, 17.099998)
+scale = Vector2(4.45, 4.45)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(440, 0, 40, 16)
+
+[node name="earthquake_log_text_box_4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(96, 84.99999)
+scale = Vector2(4.45, 4.45)
+texture = ExtResource("1_2ccmw")
+region_enabled = true
+region_rect = Rect2(440, 32, 40, 16)
+
+[node name="ui_title" type="Label" parent="."]
+offset_left = -101.5
+offset_top = -58.5
+offset_right = 102.5
+offset_bottom = -15.5
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Earthquake History Log"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://de404qcv5gupo"]
+
+[ext_resource type="Texture2D" uid="uid://dcpfe5efvkc0p" path="res://assets/unused_library/Cyberpunk Interior Remaster/tilesets/Inside_Bv2_remaster.png" id="1_ex60b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0a5cp"]
+radius = 34.22353
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0a5cp"]
+size = Vector2(49, 17)
+
+[node name="ngmc_laptop" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="sprite_ngmc_laptop" type="Sprite2D" parent="."]
+position = Vector2(0, -15)
+texture = ExtResource("1_ex60b")
+region_enabled = true
+region_rect = Rect2(432, 560, 48, 48)
+
+[node name="mouse_over_area" type="Area2D" parent="."]
+position = Vector2(0, 6)
+
+[node name="ngmc_laptop_collision" type="CollisionShape2D" parent="mouse_over_area"]
+y_sort_enabled = true
+position = Vector2(-0.5, -20)
+shape = SubResource("CircleShape2D_0a5cp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_0a5cp")

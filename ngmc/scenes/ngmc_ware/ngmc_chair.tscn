@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ql8ke6qm4ecq"]
+
+[ext_resource type="Texture2D" uid="uid://dcpfe5efvkc0p" path="res://assets/unused_library/Cyberpunk Interior Remaster/tilesets/Inside_Bv2_remaster.png" id="1_lcem1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjq53"]
+size = Vector2(38, 18)
+
+[node name="ngmc_chair" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="sprite_ngmc_chair" type="Sprite2D" parent="."]
+position = Vector2(0, -23)
+texture = ExtResource("1_lcem1")
+region_enabled = true
+region_rect = Rect2(576, 136, 48, 56)
+
+[node name="ngmc_chair_collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_pjq53")

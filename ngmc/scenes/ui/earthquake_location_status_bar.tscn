@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://beby013pqm8xx"]
+
+[ext_resource type="Texture2D" uid="uid://b63mmvpk47m27" path="res://assets/unused_library/World of Solaria UI Asset Pack Update 03c/Solaria UI Update 03c/Bars & Meters - Progress green.svg" id="1_66nwy"]
+[ext_resource type="Texture2D" uid="uid://2pan064rirot" path="res://assets/unused_library/World of Solaria UI Asset Pack Update 03c/Solaria UI Update 03c/Bars & Meters - Progress green bottom.svg" id="1_cibkk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kcid0"]
+texture = ExtResource("1_cibkk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cibkk"]
+texture = ExtResource("1_66nwy")
+
+[node name="TextureProgressBar" type="ProgressBar"]
+z_index = 12
+texture_filter = 1
+custom_minimum_size = Vector2(100, 40)
+offset_left = -109.0
+offset_top = -121.0
+offset_right = 111.0
+offset_bottom = -81.0
+theme_override_styles/background = SubResource("StyleBoxTexture_kcid0")
+theme_override_styles/fill = SubResource("StyleBoxTexture_cibkk")
+show_percentage = false
+
+[node name="Label" type="Label" parent="."]
+z_index = 12
+layout_mode = 0
+offset_left = 23.0
+offset_top = -27.0
+offset_right = 196.0
+offset_bottom = -4.0
+text = "Locating earthquake..."
